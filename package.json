@@ -59,7 +59,7 @@
     "request-promise": "^4.2.1",
     "require-dir": "^0.3.0",
     "sequelize": "^3.30.4",
-    "sqlite": "^2.8.0",
+    "sqlite3": "^3.1.10",
     "tmp": "0.0.31",
     "tosource": "^1.0.0",
     "validator": "^8.0.0",
