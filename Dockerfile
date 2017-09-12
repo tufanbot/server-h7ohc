@@ -18,9 +18,7 @@ COPY package.json .
 
 RUN npm install
 
-WORKDIR "/var/host"
-
-RUN zip -9qyr lambda.zip *
+CMD cat .lambdaignore | xargs zip -9qyr /var/host/lambda.zip . -x
 
 # install dev version
 # RUN npm install
