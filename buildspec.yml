@@ -4,9 +4,6 @@ phases:
   build:
     commands:
       - docker build -t tufan-app .
-  post_build:
-    commands:
-      - zip -r lambda.zip *
 artifacts:
   files: 
     - lambda.zip
