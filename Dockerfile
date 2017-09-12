@@ -14,6 +14,10 @@ RUN yum -y install git
 
 WORKDIR "/var/host"
 
+COPY package.json .
+
+RUN npm install
+
 # install dev version
 # RUN npm install
 # build & test
