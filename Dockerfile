@@ -12,6 +12,8 @@ RUN rm -rf /var/runtime /var/lang && \
 # install git, so we can clone the repo
 RUN yum -y install git
 
+WORKDIR "/var/host"
+
 # install dev version
 # RUN npm install
 # build & test
