@@ -1,9 +1,21 @@
 version: 0.2
 
 phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email --region us-west-1)
   build:
     commands:
-      - docker build -t tufan-app .
+      - echo Build started on `date`
+      - echo Building the Docker image...          
+      - docker build -t tufan-repo .
+      - docker tag tufan-repo:latest 137316275239.dkr.ecr.us-west-1.amazonaws.com/tufan-repo:latest      
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push 137316275239.dkr.ecr.us-west-1.amazonaws.com/tufan-repo:latest
 artifacts:
   files: 
     - lambda.zip
