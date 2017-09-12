@@ -20,6 +20,8 @@ RUN npm install
 
 WORKDIR "/var/host"
 
+RUN zip -9qyr lambda.zip *
+
 # install dev version
 # RUN npm install
 # build & test
