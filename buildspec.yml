@@ -17,7 +17,7 @@ phases:
       - echo Pushing the Docker image...
       - docker push 137316275239.dkr.ecr.us-west-1.amazonaws.com/tufan-repo:latest
       - docker images
-      - docker run tufan-repo npm install && zip -r lambda.zip *
+      - docker run tufan-repo zip -r lambda.zip *
 artifacts:
   files: 
     - lambda.zip
