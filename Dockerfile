@@ -18,8 +18,6 @@ COPY package.json .
 
 RUN npm install
 
-CMD cat .lambdaignore | xargs zip -9qyr /var/host/lambda.zip . -x
-
 # install dev version
 # RUN npm install
 # build & test
