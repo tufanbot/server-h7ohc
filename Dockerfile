@@ -13,7 +13,7 @@ RUN rm -rf /var/runtime /var/lang && \
 RUN yum -y install git
 
 # install dev version
-RUN npm install
+# RUN npm install
 # build & test
 # RUN npm run build 
 
