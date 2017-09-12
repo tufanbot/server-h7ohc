@@ -1,10 +1,9 @@
 version: 0.2
 
 phases:
-  install:
+  build:
     commands:
-      - npm install
-      - npm run sqlite-lambda
+      - docker build
   post_build:
     commands:
       - zip -r lambda.zip *
