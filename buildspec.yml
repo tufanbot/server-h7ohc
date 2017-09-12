@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - npm install
+      - npm run sqlite-build
   post_build:
     commands:
       - zip -r lambda.zip *
