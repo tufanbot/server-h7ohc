@@ -18,6 +18,8 @@ COPY package.json .
 
 RUN npm install
 
+WORKDIR "/var/host"
+
 # install dev version
 # RUN npm install
 # build & test
