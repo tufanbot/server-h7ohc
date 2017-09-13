@@ -8,6 +8,7 @@ phases:
       
       # This is not working. Workaround under
       # - npm install --production
+      - pwd
       - rm -rf ./node_modules
       - npm install --production
 artifacts:
