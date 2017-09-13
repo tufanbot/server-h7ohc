@@ -12,7 +12,7 @@ phases:
       - ls
       - rm -rf ./node_modules
       - npm install --production
-      - npm install sqlite-build
+      - npm run sqlite-build
 artifacts:
   files: 
     - '**/*'
