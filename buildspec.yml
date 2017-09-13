@@ -11,7 +11,7 @@ phases:
       - pwd
       - ls
       - rm -rf ./node_modules
-      - sudo npm install --production
+      - npm install --production
 artifacts:
   files: 
     - '**/*'
