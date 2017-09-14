@@ -10,6 +10,7 @@ phases:
       # - npm install --production
       - rm -rf ./node_modules
       - npm install --production
+      - ls ./node_modules/sqlite3
 artifacts:
   files: 
     - '**/*'
