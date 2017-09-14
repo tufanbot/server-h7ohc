@@ -55,6 +55,7 @@
     "lodash": "^4.6.1",
     "morgan": "^1.7.0",
     "mysql": "^2.13.0",
+    "node-pre-gyp": "^0.6.37",
     "nunjucks": "^3.0.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
