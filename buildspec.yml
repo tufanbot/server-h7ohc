@@ -8,11 +8,8 @@ phases:
       
       # This is not working. Workaround under
       # - npm install --production
-      - pwd
-      - ls
       - rm -rf ./node_modules
       - npm install --production
-      - npm run sqlite-lambda
 artifacts:
   files: 
     - '**/*'
