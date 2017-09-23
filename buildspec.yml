@@ -7,8 +7,7 @@ phases:
       # - npm run build
       
       # This is not working. Workaround under
-      - pwd
-      - ls
+      - export HOME='/tmp' 
       - rm -rf ./node_modules
       - npm install --production
 artifacts:
