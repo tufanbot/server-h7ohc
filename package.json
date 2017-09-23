@@ -12,15 +12,6 @@
     "sqlite-lambda": "npm uninstall sqlite3; npm install sqlite3 --target=0.10.36 --target_arch=x64 --target_platform=linux",
     "sqlite-build": "npm install nan@^2.3.2;rm -rf node_modules/sqlite3/node_modules/nan/;npm rebuild sqlite3 --build-from-source"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
-  "pre-push": [
-    "lint",
-    "test",
-    "secure"
-  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {

@@ -9,13 +9,6 @@ ENV PATH=/var/lang/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 RUN rm -rf /var/runtime /var/lang && \
   curl https://lambci.s3.amazonaws.com/fs/nodejs6.10.tgz | tar -zx -C /
   
-# install git, so we can clone the repo
-RUN yum -y install git
-
-WORKDIR "/var/host"
-
-RUN npm install
-
 # install dev version
 # RUN npm install
 # build & test

@@ -14,7 +14,13 @@ var AWS = require('aws-sdk');
 
 var app;
 var serverReady = false;
-var dbconfig = {};
+var dbconfig = {
+  dialect: 'sqlite',
+  storage: './tufan.db',
+  dbname: 'tufandb',
+  username: 'root',
+  password: 'root'
+};
 
 var getConfig = function() {
   console.log('getConfig');
@@ -96,7 +102,7 @@ exports.handler = function _f(event, context) {
   
   if (!serverReady) {
     try {
-      getConfig().then(function(dbconfig) {
+      // getConfig().then(function(dbconfig) {
         init(dbconfig);
         app.get('sequelize').sync()
         .then(function _then() {
@@ -108,7 +114,7 @@ exports.handler = function _f(event, context) {
             }
           });
         });
-      })
+      // })
     } catch (err) {
       console.log(err);
     }
