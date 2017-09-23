@@ -15,5 +15,6 @@ RUN rm -rf /var/runtime /var/lang && \
 # RUN npm run build 
 
 # cleanup any dev dependencies
-# RUN npm install --production
+WORKDIR "/var/host"
+RUN npm install --production
 
