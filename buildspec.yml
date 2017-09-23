@@ -7,10 +7,10 @@ phases:
       # - npm run build
       
       # This is not working. Workaround under
-      - cd /var/host
+      - pwd
+      - ls
+      - rm -rf ./node_modules
       - npm install --production
-      # - rm -rf ./node_modules
-      # - npm install --production
 artifacts:
   files: 
     - '**/*'
